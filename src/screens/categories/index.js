@@ -3,7 +3,7 @@ import React from 'react';
 import {View, Text} from 'react-native'
 import {styles} from './styles'
 
-const Category = () => {
+const Categories = () => {
   return (
     <View style={styles.container}>
       <Text style={style.title}>Home Screw</Text>
@@ -11,4 +11,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Categories;
