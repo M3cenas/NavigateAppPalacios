@@ -31,7 +31,7 @@ const MainNavigator = () => {
       <Stack.Screen
         name="Categories"
         component={Categories}
-        options={({route}) => ({})}
+        options={({route}) => ({title: route.params.title})}
       />
       <Stack.Screen name="Album" component={Album} />
     </Stack.Navigator>
