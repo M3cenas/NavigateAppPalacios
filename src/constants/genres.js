@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+export const GENRES = [
   {
     Id: '1',
     name: 'Hip-hop',

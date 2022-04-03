@@ -1,23 +1,23 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
 import {styles} from './styles';
-import CategoryGrid from '../../components/molecules/category-grid/index';
-import {CATEGORIES} from '../../constants/categories';
+import AlbumGrid from '../../components/molecules/album-grid/index';
+import {GENRES} from '../../constants/genres';
 
 const Home = ({navigation}) => {
-  const handleSelectCategory = Categories => {
-    navigation.navigate('Categories', {
-      id: Categories.id,
-      title: Categories.name,
+  const handleSelectCategory = Album => {
+    navigation.navigate('Album', {
+      id: Album.id,
+      name: Album.name,
     });
   };
   const renderItem = ({item}) => (
-    <CategoryGrid item={item} onSelected={handleSelectCategory} />
+    <AlbumGrid item={item} onSelected={handleSelectCategory} />
   );
   return (
     <View style={styles.container}>
       <FlatList
-        data={CATEGORIES}
+        data={GENRES}
         keyExtractor={item => item.Id}
         renderItem={renderItem}
       />

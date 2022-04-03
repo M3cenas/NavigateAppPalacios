@@ -2,8 +2,8 @@ import React from 'react';
 import {Platform} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/home/index';
-import Categories from '../screens/categories/index';
 import Album from '../screens/album/index';
+import AlbumDetail from '../screens/albumDetail/index';
 import {colors} from '../constants/themes';
 
 const Stack = createNativeStackNavigator();
@@ -29,11 +29,11 @@ const MainNavigator = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Categories"
-        component={Categories}
+        name="Album"
+        component={Album}
         options={({route}) => ({title: route.params.name})}
       />
-      <Stack.Screen name="Album" component={Album} />
+      <Stack.Screen name="AlbumDetail" component={AlbumDetail} />
     </Stack.Navigator>
   );
 };
