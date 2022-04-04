@@ -8,7 +8,7 @@ const AlbumDetail = () => {
       <Text style={styles.title}>MM... FOOD</Text>
       <Image
         style={styles.image}
-        source={require('../../../assets/images/Mmfood.jpg')}
+        source={require('../../../assets/coverArts/Mmfood.jpg')}
       />
       <Text>Released 16 November 2004</Text>
       <Text>Album Abstract Hip hop</Text>

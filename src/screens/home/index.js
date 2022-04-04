@@ -5,14 +5,14 @@ import AlbumGrid from '../../components/molecules/album-grid/index';
 import {GENRES} from '../../constants/genres';
 
 const Home = ({navigation}) => {
-  const handleSelectCategory = Album => {
+  const handleSelectGenre = genre => {
     navigation.navigate('Album', {
-      id: Album.id,
-      name: Album.name,
+      Id: genre.Id,
+      name: genre.name,
     });
   };
   const renderItem = ({item}) => (
-    <AlbumGrid item={item} onSelected={handleSelectCategory} />
+    <AlbumGrid item={item} onSelected={handleSelectGenre} />
   );
   return (
     <View style={styles.container}>

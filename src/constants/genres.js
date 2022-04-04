@@ -1,20 +1,20 @@
 export const GENRES = [
   {
-    Id: '1',
-    name: 'Hip-hop',
-    color: '#FFC107',
-    description:
-      'Genero musical basado en el uso de beats y sample con un estilo de canto rapeado.',
-  },
-  {
-    Id: '2',
+    Id: 1,
     name: 'Rock',
     color: '#FFC107',
     description:
       'Este genero se basa en el uso de guitarras, bajos y baterias.',
   },
   {
-    Id: '3',
+    Id: 2,
+    name: 'Hip-hop',
+    color: '#FFC107',
+    description:
+      'Genero musical basado en el uso de beats y sample con un estilo de canto rapeado.',
+  },
+  {
+    Id: 3,
     name: 'Metal',
     color: '#FFC107',
     description:

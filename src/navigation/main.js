@@ -33,7 +33,11 @@ const MainNavigator = () => {
         component={Album}
         options={({route}) => ({title: route.params.name})}
       />
-      <Stack.Screen name="AlbumDetail" component={AlbumDetail} />
+      <Stack.Screen
+        name="AlbumDetail"
+        component={AlbumDetail}
+        options={({route}) => ({title: route.params.name})}
+      />
     </Stack.Navigator>
   );
 };
