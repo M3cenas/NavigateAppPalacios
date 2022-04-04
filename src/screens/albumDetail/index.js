@@ -1,18 +1,22 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Button} from 'react-native';
+import {colors} from '../../constants/themes';
 import {styles} from './styles';
 
-const AlbumDetail = () => {
+const AlbumDetail = ({navigation, route}) => {
+  const {album} = route.params;
+  const {name, artist, coverArt, releaseDate} = album;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>MM... FOOD</Text>
-      <Image
-        style={styles.image}
-        source={require('../../../assets/coverArts/Mmfood.jpg')}
+      <Text style={styles.title}>{name}</Text>
+      <Image style={styles.coverArt} source={`${coverArt}`} />
+      <Text>{artist}</Text>
+      <Text>{releaseDate}</Text>
+      <Button
+        title="Order now"
+        onPress={() => null}
+        color={colors.primaryColor}
       />
-      <Text>Released 16 November 2004</Text>
-      <Text>Album Abstract Hip hop</Text>
-      <Text>Length 48:54</Text>
     </View>
   );
 };

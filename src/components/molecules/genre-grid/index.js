@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, TouchableOpacity, Platform} from 'react-native';
 import {styles} from './styles';
 
-export const AlbumGrid = ({item, onSelected}) => {
+export const GenreGrid = ({item, onSelected}) => {
   return (
     <View style={[styles.container, {backgroundColor: item.color}]}>
       <TouchableOpacity
@@ -16,4 +16,4 @@ export const AlbumGrid = ({item, onSelected}) => {
   );
 };
 
-export default AlbumGrid;
+export default GenreGrid;

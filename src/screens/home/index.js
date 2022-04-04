@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
 import {styles} from './styles';
-import AlbumGrid from '../../components/molecules/album-grid/index';
+import GenreGrid from '../../components/molecules/genre-grid/index';
 import {GENRES} from '../../constants/genres';
 
 const Home = ({navigation}) => {
@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
     });
   };
   const renderItem = ({item}) => (
-    <AlbumGrid item={item} onSelected={handleSelectGenre} />
+    <GenreGrid item={item} onSelected={handleSelectGenre} />
   );
   return (
     <View style={styles.container}>

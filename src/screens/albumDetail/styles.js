@@ -11,4 +11,8 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 20,
   },
+  coverArt: {
+    height: 300,
+    width: 300,
+  },
 });
