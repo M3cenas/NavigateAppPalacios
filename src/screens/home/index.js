@@ -1,23 +1,27 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
 import {styles} from './styles';
+import {useSelector, useDispatch, connect} from 'react-redux';
 import GenreGrid from '../../components/molecules/genre-grid/index';
-import {GENRES} from '../../constants/genres';
+import {selectedGenre} from '../../store/actions/genre.action';
 
 const Home = ({navigation}) => {
+  const dispatch = useDispatch();
+  const genres = useSelector(state => state.genres.genres);
   const handleSelectGenre = genre => {
-    navigation.navigate('Album', {
-      Id: genre.Id,
-      name: genre.name,
-    });
+    console.log(genre.Id);
+    dispatch(selectedGenre(genre.Id));
+
+    navigation.navigate('Album', {name: genre.name});
   };
   const renderItem = ({item}) => (
     <GenreGrid item={item} onSelected={handleSelectGenre} />
   );
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={GENRES}
+        data={genres}
         keyExtractor={item => item.Id}
         renderItem={renderItem}
       />
@@ -25,4 +29,4 @@ const Home = ({navigation}) => {
   );
 };
 
-export default Home;
+export default connect()(Home);

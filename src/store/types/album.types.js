@@ -1,0 +1,4 @@
+export const albumTypes = {
+  SELECT_ALBUM: 'SELECT_ALBUM',
+  FILTERED_ALBUMS: 'FILTERED_ALBUMS',
+};

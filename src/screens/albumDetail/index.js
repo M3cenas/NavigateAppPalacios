@@ -1,10 +1,12 @@
 import React from 'react';
+import {useSelector, connect} from 'react-redux';
 import {View, Text, Image, Button} from 'react-native';
 import {colors} from '../../constants/themes';
 import {styles} from './styles';
 
 const AlbumDetail = ({navigation, route}) => {
-  const {album} = route.params;
+  const album = useSelector(state => state.albums.selectedAlbum);
+  console.log('selected album', album);
   const {name, artist, coverArt, releaseDate} = album;
   return (
     <View style={styles.container}>
@@ -21,4 +23,4 @@ const AlbumDetail = ({navigation, route}) => {
   );
 };
 
-export default AlbumDetail;
+export default connect()(AlbumDetail);
