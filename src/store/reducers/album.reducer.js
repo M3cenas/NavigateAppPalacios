@@ -9,8 +9,6 @@ const initialState = {
 };
 
 const albumReducer = (state = initialState, action) => {
-  console.log('ablum id', action.albumId);
-  console.log(action.type);
   switch (action.type) {
     case SELECT_ALBUM:
       return {

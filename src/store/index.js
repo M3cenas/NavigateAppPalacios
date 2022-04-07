@@ -1,4 +1,4 @@
-import {createStore, combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
 import genreReducer from './reducers/genre.reducer';
 import albumReducer from './reducers/album.reducer';
 import thunk from 'redux-thunk';

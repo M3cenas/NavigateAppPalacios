@@ -12,7 +12,6 @@ const Album = ({navigation, route}) => {
   const dispatch = useDispatch();
   const genreAlbum = useSelector(state => state.albums.filteredAlbums);
   const selectedGenre = useSelector(state => state.genres.selectedGenre);
-  console.log(genreAlbum);
   const handleSelectGenre = genre => {
     dispatch(selectAlbum(genre.Id));
     navigation.navigate('AlbumDetail', {name: genre.name});

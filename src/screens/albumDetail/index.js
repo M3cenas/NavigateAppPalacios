@@ -6,7 +6,6 @@ import {styles} from './styles';
 
 const AlbumDetail = ({navigation, route}) => {
   const album = useSelector(state => state.albums.selectedAlbum);
-  console.log('selected album', album);
   const {name, artist, coverArt, releaseDate} = album;
   return (
     <View style={styles.container}>

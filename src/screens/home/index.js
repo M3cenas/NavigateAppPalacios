@@ -9,7 +9,6 @@ const Home = ({navigation}) => {
   const dispatch = useDispatch();
   const genres = useSelector(state => state.genres.genres);
   const handleSelectGenre = genre => {
-    console.log(genre.Id);
     dispatch(selectedGenre(genre.Id));
 
     navigation.navigate('Album', {name: genre.name});
