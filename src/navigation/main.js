@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/home/index';
 import Album from '../screens/album/index';
 import AlbumDetail from '../screens/albumDetail/index';
+import Cart from '../screens/cart/index';
 import {colors} from '../constants/themes';
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ const MainNavigator = () => {
         component={AlbumDetail}
         options={({route}) => ({title: route.params.name})}
       />
+      <Stack.Screen name="Cart" component={Cart} />
     </Stack.Navigator>
   );
 };

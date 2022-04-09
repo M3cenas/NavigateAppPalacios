@@ -19,7 +19,7 @@ const CartItem = ({item, onDelete}) => {
         <View>
           <Button
             title="Borrar"
-            onPress={() => onDelete(item.id)}
+            onPress={() => onDelete(item.Id)}
             color={colors.primaryColor}
           />
         </View>
