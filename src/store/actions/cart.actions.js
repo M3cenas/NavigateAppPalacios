@@ -1,7 +1,7 @@
 import {URL_API} from '../../utils/database';
 import {cartTypes} from '../types/cart.types';
 
-const {ADD_ITEM, REMOVE_ITEM, CONFIRM_CART} = cartTypes;
+const {ADD_ITEM, REMOVE_ITEM, COMFIRM_CART} = cartTypes;
 
 export const addItem = item => ({
   type: ADD_ITEM,
@@ -13,21 +13,21 @@ export const removeItem = Id => ({
   Id,
 });
 
-export const confirmCart = (cart, total) => {
+export const confirmCart = (cart, total, user) => {
   return async dispatch => {
     try {
-      const response = await fetch(`${URL_API}/cart.json`, {
+      const response = await fetch(`${URL_API}/order.json`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({date: Date.now, items: cart, total}),
+        body: JSON.stringify({date: Date.now(), items: cart, total, user}),
       });
 
       const result = await response.json();
-      console.log(result);
+      console.warn(result);
       dispatch({
-        type: CONFIRM_CART,
+        type: COMFIRM_CART,
         cart: result,
       });
     } catch (error) {
